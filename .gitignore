@@ -1,0 +1,7 @@
+# Large raw files
+*_raw.png
+opt1.png
+opt2.png
+
+# System files
+.DS_Store

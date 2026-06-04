@@ -1,0 +1,2422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>North Dallas Security &amp; Protective Services | Licensed DFW Security Guards</title>
+  <meta name="description" content="State-licensed armed and unarmed security guard services in Dallas–Fort Worth. Specializing in protecting commercial properties, construction sites, and warehouses from theft and break-ins. Texas DPS PSB License # C31175201." />
+  
+  <!-- Premium Fonts: Cormorant Garamond (editorial serif) + Inter (professional sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  
+  <style>
+    :root {
+      /* Corporate Security Palette: Slate Charcoal, Muted Gold, Soft Off-White */
+      --bg-base: #0a0b0d;
+      --bg-panel: #0f1115;
+      --bg-card: #14171c;
+      
+      --text-main: #f8f9fa;
+      --text-muted: #9fa4b0;
+      --text-dark: #5b606d;
+      
+      --gold-primary: #c5a059;
+      --gold-bright: #e5c17d;
+      --gold-dark: #7a5f2b;
+      --gold-muted: rgba(197, 160, 89, 0.4);
+      
+      --gold-gradient: linear-gradient(135deg, var(--gold-dark) 0%, var(--gold-primary) 60%, var(--gold-bright) 100%);
+      
+      --border-thin: 1px solid rgba(255, 255, 255, 0.05);
+      --border-gold: 1px solid rgba(197, 160, 89, 0.15);
+      
+      --font-serif: 'Cormorant Garamond', serif;
+      --font-sans: 'Inter', sans-serif;
+      --font-mono: monospace;
+      
+      --transition-standard: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* Reset & Structural Rules (Clean 90-degree corners for corporate structure) */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      border-radius: 0 !important;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background-color: var(--bg-base);
+      color: var(--text-main);
+      font-family: var(--font-sans);
+      font-size: 15px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      overflow-x: hidden;
+      background-color: var(--bg-base);
+      background-image: 
+        radial-gradient(rgba(197, 160, 89, 0.015) 1px, transparent 1px),
+        linear-gradient(rgba(255, 255, 255, 0.003) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.003) 1px, transparent 1px);
+      background-size: 40px 40px, 80px 80px, 80px 80px;
+    }
+
+    /* Scrollbar */
+    html {
+      scrollbar-color: var(--gold-primary) var(--bg-base);
+      scrollbar-width: thin;
+    }
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: var(--bg-base);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: var(--gold-dark);
+      border: 1px solid var(--bg-base);
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--gold-primary);
+    }
+
+    /* Layout Containers */
+    .container {
+      max-width: 1300px;
+      margin-inline: auto;
+      padding-inline: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding-inline: 24px;
+      }
+    }
+
+    /* Typography */
+    h1, h2, h3, h4 {
+      font-family: var(--font-sans);
+      font-weight: 700;
+      color: var(--text-main);
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+    }
+
+    p {
+      color: var(--text-muted);
+      letter-spacing: 0.01em;
+    }
+
+    .corporate-italic {
+      font-family: var(--font-serif);
+      font-weight: 300;
+      font-style: italic;
+      color: var(--gold-bright);
+      text-transform: none;
+    }
+
+    .section-label {
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold-primary);
+      margin-bottom: 20px;
+      display: inline-block;
+    }
+
+    .badge-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 6px 14px;
+      font-family: var(--font-sans);
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--gold-bright);
+      border: 1px solid rgba(197, 160, 89, 0.2);
+      background: rgba(197, 160, 89, 0.02);
+      margin-bottom: 24px;
+    }
+
+    .badge-tag::before {
+      content: '';
+      width: 5px;
+      height: 5px;
+      background: var(--gold-primary);
+      display: inline-block;
+    }
+
+    /* Clean Corporate Buttons with premium slide-in hover effect */
+    .btn-action {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 16px 32px;
+      font-family: var(--font-sans);
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      cursor: pointer;
+      border: 1px solid var(--text-dark);
+      background: transparent;
+      color: var(--text-main);
+      transition: var(--transition-standard);
+      text-decoration: none;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    .btn-action::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(197, 160, 89, 0.08);
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: -1;
+    }
+
+    .btn-action:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+    .btn-action:hover {
+      border-color: var(--gold-primary);
+      color: var(--gold-bright);
+      box-shadow: 0 4px 20px rgba(197, 160, 89, 0.05);
+    }
+
+    .btn-action-solid {
+      border: none;
+      background: var(--gold-gradient);
+      color: #0a0b0d;
+    }
+
+    .btn-action-solid:hover {
+      background: var(--gold-gradient);
+      box-shadow: 0 4px 20px rgba(197, 160, 89, 0.25);
+      color: #0a0b0d;
+      opacity: 0.95;
+      transform: translateY(-1px);
+    }
+
+    /* Section Spacing */
+    .section-pad {
+      padding-block: 100px;
+      border-bottom: var(--border-thin);
+    }
+
+    /* Scroll Reveal */
+    .reveal-element {
+      opacity: 0;
+      transform: translateY(15px);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal-element.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ==========================================================================
+       HEADER & NAVIGATION
+       ========================================================================== */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      padding-block: 22px;
+      border-bottom: var(--border-thin);
+      background: rgba(11, 12, 14, 0.97);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      transition: var(--transition-standard);
+    }
+
+    header.scrolled {
+      padding-block: 14px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .nav-flex {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo-block {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      text-decoration: none;
+    }
+
+    .logo-icon-svg {
+      width: 40px;
+      height: 40px;
+      transition: filter 0.4s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .logo-block:hover .logo-icon-svg {
+      transform: translateY(-1px);
+      filter: brightness(1.15) drop-shadow(0 2px 10px rgba(229, 193, 125, 0.4));
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.15;
+    }
+
+    .logo-text b {
+      font-family: var(--font-sans);
+      font-size: 1.2rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-main);
+      transition: var(--transition-standard);
+    }
+
+    .logo-block:hover .logo-text b {
+      color: var(--gold-bright);
+    }
+
+    .logo-text span {
+      font-family: var(--font-sans);
+      font-size: 0.52rem;
+      font-weight: 600;
+      color: var(--gold-primary);
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      margin-top: 2px;
+      white-space: nowrap;
+    }
+
+    .nav-links-deck {
+      display: flex;
+      gap: 32px;
+    }
+
+    .nav-links-deck a {
+      font-family: var(--font-sans);
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--text-muted);
+      text-decoration: none;
+      padding-block: 4px;
+      transition: var(--transition-standard);
+    }
+
+    .nav-links-deck a:hover {
+      color: var(--gold-bright);
+    }
+
+    .header-license-label {
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--gold-primary);
+      border: 1px solid var(--border-gold);
+      padding: 6px 14px;
+      background: rgba(197, 160, 89, 0.02);
+      letter-spacing: 0.04em;
+    }
+
+    .menu-trigger {
+      display: none;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      flex-direction: column;
+      gap: 5px;
+      padding: 6px;
+      z-index: 1001;
+    }
+
+    .menu-trigger span {
+      display: block;
+      width: 22px;
+      height: 1px;
+      background: var(--text-main);
+      transition: var(--transition-standard);
+    }
+
+    .menu-trigger.open span:nth-child(1) {
+      transform: translateY(6px) rotate(45deg);
+    }
+    .menu-trigger.open span:nth-child(2) {
+      opacity: 0;
+    }
+    .menu-trigger.open span:nth-child(3) {
+      transform: translateY(-6px) rotate(-45deg);
+    }
+
+    .mobile-overlay-menu {
+      position: fixed;
+      inset: 0;
+      background: rgba(11, 12, 14, 0.98);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      z-index: 999;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 60px 40px;
+      gap: 24px;
+      transform: translateX(100%);
+      transition: transform 0.5s ease-in-out;
+      border-left: var(--border-thin);
+    }
+
+    .mobile-overlay-menu.active {
+      transform: translateX(0);
+    }
+
+    .mobile-overlay-menu a {
+      font-family: var(--font-sans);
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--text-main);
+      text-decoration: none;
+      border-bottom: var(--border-thin);
+      padding-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      transition: var(--transition-standard);
+    }
+
+    .mobile-overlay-menu a:hover {
+      color: var(--gold-bright);
+    }
+
+    @media (max-width: 991px) {
+      .nav-links-deck, header .btn-action, .header-license-label {
+        display: none;
+      }
+      .menu-trigger {
+        display: flex;
+      }
+    }
+
+    /* ==========================================================================
+       HERO SECTION — Full-Bleed Split-Screen (Agency Pattern)
+       The left text column drives the height. The right photo column
+       uses position:absolute children to fill whatever height the left
+       column creates. This guarantees zero collapse, zero cutoff.
+       ========================================================================== */
+    .hero-sec {
+      position: relative;
+      border-bottom: var(--border-thin);
+      background-color: var(--bg-base);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      height: 100vh;
+      height: 100dvh;
+    }
+
+    /* ── Left Column: Text & CTAs ── */
+    .hero-left-col {
+      padding-left: max(40px, calc((100vw - 1300px) / 2 + 40px));
+      padding-right: 60px;
+      padding-top: 140px;
+      padding-bottom: 100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border-right: var(--border-thin);
+      position: relative;
+      background-color: var(--bg-base);
+    }
+
+    .hero-left-content {
+      max-width: 620px;
+    }
+
+    /* Asymmetric Editorial Hero Typography */
+    .hero-subheading {
+      display: block;
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold-primary);
+      margin-bottom: 12px;
+    }
+
+    .hero-main-title {
+      display: block;
+      font-family: var(--font-sans);
+      font-size: clamp(3rem, 7.5vw, 6.2rem);
+      font-weight: 850;
+      line-height: 0.85;
+      letter-spacing: -0.04em;
+      text-transform: uppercase;
+      color: var(--text-main);
+    }
+
+    .hero-italic-title {
+      display: block;
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 4.2vw, 3.6rem);
+      font-weight: 300;
+      font-style: italic;
+      line-height: 1.1;
+      color: var(--gold-bright);
+      margin-top: 12px;
+      text-transform: none;
+      letter-spacing: normal;
+    }
+
+    .hero-sec h1 {
+      margin-block: 16px 28px;
+    }
+
+    .hero-sec p.lead-summary {
+      font-size: clamp(1.05rem, 1.25vw, 1.15rem);
+      font-weight: 400;
+      line-height: 1.6;
+      color: var(--text-muted);
+      margin-bottom: 44px;
+    }
+
+    .hero-cta-deck {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      border-top: var(--border-thin);
+      padding-top: 36px;
+      margin-top: 12px;
+    }
+
+    /* Vertical License bar (Margin Editorial detail) */
+    .vertical-license-bar {
+      position: absolute;
+      left: -20px;
+      top: 15%;
+      transform: rotate(-90deg) translateX(-100%);
+      transform-origin: left top;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      white-space: nowrap;
+      font-family: var(--font-sans);
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      color: var(--text-dark);
+      text-transform: uppercase;
+      pointer-events: none;
+      opacity: 0.7;
+    }
+
+    .vertical-license-bar .bar-divider {
+      width: 32px;
+      height: 1px;
+      background: var(--text-dark);
+      opacity: 0.3;
+    }
+
+    /* ── Right Column: Full-bleed photo ──
+       Stays in grid flow so it doesn't break page layout.
+       Image is absolute WITHIN this cell. */
+    .hero-right-col {
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* The image + overlay sit absolutely inside the grid cell */
+    .hero-image-fill {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 20%;
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .hero-right-col:hover .hero-image-fill {
+      transform: scale(1.03);
+    }
+
+    .hero-right-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to top,
+        rgba(11, 12, 14, 0.8) 0%,
+        rgba(11, 12, 14, 0.3) 40%,
+        transparent 70%
+      );
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    /* Floating active dispatch badge — overlaps the column seam */
+    .hero-floating-badge {
+      position: absolute;
+      top: 180px;
+      left: -30px;
+      background: var(--bg-panel);
+      border: 1px solid var(--gold-primary);
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      z-index: 10;
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+      transition: var(--transition-standard);
+    }
+
+    .hero-floating-badge:hover {
+      border-color: var(--gold-bright);
+      transform: translateY(-2px);
+    }
+
+    .badge-dot {
+      width: 8px;
+      height: 8px;
+      background: #4caf50;
+      box-shadow: 0 0 12px #4caf50;
+      animation: pulse-dot 2s infinite;
+    }
+
+    @keyframes pulse-dot {
+      0% { transform: scale(0.9); opacity: 0.6; }
+      50% { transform: scale(1.15); opacity: 1; }
+      100% { transform: scale(0.9); opacity: 0.6; }
+    }
+
+    .badge-content {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.2;
+    }
+
+    .badge-num {
+      font-family: var(--font-sans);
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--text-main);
+    }
+
+    .badge-lbl {
+      font-family: var(--font-sans);
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      letter-spacing: 0.08em;
+    }
+
+    .hero-right-meta-caption {
+      position: absolute;
+      bottom: 50px;
+      left: 40px;
+      right: 40px;
+      z-index: 3;
+    }
+
+    .luxury-caption-card {
+      border-left: 2px solid var(--gold-primary);
+      padding-left: 20px;
+    }
+
+    .luxury-caption-card h4 {
+      font-family: var(--font-sans);
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-bottom: 4px;
+      color: var(--text-main);
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+    }
+
+    .luxury-caption-card p {
+      font-size: 0.72rem;
+      font-family: var(--font-sans);
+      font-weight: 600;
+      color: var(--gold-bright);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 991px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        min-height: auto;
+      }
+      .hero-left-col {
+        padding-inline: 24px;
+        padding-top: 110px;
+        padding-bottom: 50px;
+        border-right: none;
+      }
+      .hero-left-content {
+        max-width: 100%;
+      }
+      .hero-right-col {
+        height: 500px;
+      }
+      .hero-right-meta-caption {
+        bottom: 28px;
+        left: 24px;
+        right: 24px;
+      }
+      .vertical-license-bar {
+        display: none;
+      }
+      .hero-floating-badge {
+        left: 24px;
+        top: 24px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-cta-deck {
+        flex-direction: column;
+        width: 100%;
+        padding-top: 24px;
+      }
+      .hero-cta-deck .btn-action {
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    /* ==========================================================================
+       SUBTLE CORPORATE STRIP
+       ========================================================================== */
+    .ticker-bar {
+      border-bottom: var(--border-thin);
+      padding-block: 22px;
+      background: #090a0c;
+      overflow: hidden;
+      display: flex;
+    }
+
+    .ticker-track {
+      display: flex;
+      gap: 100px;
+      white-space: nowrap;
+      animation: ticker-slide 35s linear infinite;
+    }
+
+    @keyframes ticker-slide {
+      to { transform: translateX(-50%); }
+    }
+
+    .ticker-track span {
+      font-family: var(--font-sans);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .ticker-track span::after {
+      content: '•';
+      color: var(--gold-primary);
+      margin-left: 16px;
+    }
+
+    /* ==========================================================================
+       SERVICES SECTION (CLEAN GRID)
+       ========================================================================== */
+    .section-editorial-header {
+      padding-block: 80px 40px;
+      border-bottom: var(--border-thin);
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 40px;
+      align-items: end;
+    }
+
+    .section-editorial-header h2 {
+      font-family: var(--font-sans);
+      font-size: clamp(1.8rem, 4vw, 3.2rem);
+      font-weight: 800;
+      color: var(--text-main);
+      text-transform: uppercase;
+    }
+
+    .section-editorial-header p {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      max-width: 480px;
+      margin-bottom: 4px;
+    }
+
+    @media (max-width: 991px) {
+      .section-editorial-header {
+        grid-template-columns: 1fr;
+        padding-block: 60px 24px;
+      }
+    }
+
+    .wire-grid-container {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
+    /* Featured Section */
+    .featured-wire-block {
+      border: var(--border-gold);
+      background: linear-gradient(135deg, rgba(16, 18, 22, 0.5) 0%, rgba(20, 23, 28, 0.5) 100%);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      padding: 60px;
+      margin-bottom: 40px;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 60px;
+      position: relative;
+      transition: var(--transition-standard);
+    }
+
+    .featured-wire-block:hover {
+      border-color: rgba(197, 160, 89, 0.35);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), inset 0 0 20px rgba(197, 160, 89, 0.02);
+    }
+
+    .featured-wire-left {
+      max-width: 680px;
+    }
+
+    .featured-wire-left h3 {
+      font-family: var(--font-sans);
+      font-size: 2.2rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin-block: 16px 24px;
+    }
+
+    .featured-wire-left p {
+      font-size: 1.05rem;
+      margin-bottom: 36px;
+      color: var(--text-muted);
+    }
+
+    .luxury-bullet-stack {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .luxury-bullet-stack li {
+      font-size: 0.95rem;
+      padding-block: 18px;
+      border-top: var(--border-thin);
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      color: var(--text-main);
+    }
+
+    .luxury-bullet-stack li::before {
+      content: '✦';
+      color: var(--gold-primary);
+      font-size: 0.8rem;
+    }
+
+    .featured-wire-right {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-left: var(--border-thin);
+      padding-left: 60px;
+    }
+
+    .featured-wire-right-info {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 36px;
+    }
+
+    .featured-wire-right-info h4 {
+      font-family: var(--font-sans);
+      font-weight: 700;
+      font-size: 1.15rem;
+      text-transform: uppercase;
+      color: var(--gold-bright);
+    }
+
+    /* 8 Clean B2B Service Cards */
+    .services-wire-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .wire-column-card {
+      border-bottom: var(--border-thin);
+      border-right: var(--border-thin);
+      padding: 48px 30px;
+      transition: var(--transition-standard);
+      background: rgba(16, 18, 22, 0.4);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      position: relative;
+    }
+
+    .wire-column-card:hover {
+      background: rgba(197, 160, 89, 0.015);
+      border-bottom-color: rgba(197, 160, 89, 0.3);
+      border-right-color: rgba(197, 160, 89, 0.3);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4), inset 0 0 0 1px rgba(197, 160, 89, 0.05);
+    }
+
+    .wire-column-card:nth-child(4n) {
+      border-right: none;
+    }
+
+    .wire-column-card h3 {
+      font-family: var(--font-sans);
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin-block: 16px 14px;
+      text-transform: uppercase;
+      color: var(--text-main);
+    }
+
+    .wire-column-card p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+
+    @media (max-width: 991px) {
+      .featured-wire-block {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 40px;
+      }
+      .featured-wire-right {
+        border-left: none;
+        padding-left: 0;
+        padding-top: 36px;
+        border-top: var(--border-thin);
+      }
+      .services-wire-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .wire-column-card {
+        padding: 40px 24px;
+        border-right: var(--border-thin);
+      }
+      .wire-column-card:nth-child(2n) {
+        border-right: none;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .services-wire-grid {
+        grid-template-columns: 1fr;
+      }
+      .wire-column-card {
+        border-right: none !important;
+        padding-inline: 0;
+      }
+    }
+
+    /* ==========================================================================
+       TACTICAL DEPLOYMENT PLANNER
+       ========================================================================== */
+    .planner-sec {
+      background: #0d0f12;
+      border-bottom: var(--border-thin);
+    }
+
+    .planner-card {
+      border: var(--border-thin);
+      background: rgba(16, 18, 22, 0.45);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+      position: relative;
+    }
+
+    .planner-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+    }
+
+    .planner-control-deck {
+      padding: 60px 48px;
+      border-right: var(--border-thin);
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .deck-group {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .deck-label {
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--text-dark);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .deck-label span.calculated-val {
+      color: var(--gold-bright);
+      font-weight: 700;
+      background: rgba(197, 160, 89, 0.05);
+      padding: 4px 10px;
+      border: var(--border-gold);
+    }
+
+    /* Configurator Deck Buttons */
+    .tactical-selector-deck {
+      display: flex;
+      flex-direction: column;
+      border-top: var(--border-thin);
+    }
+
+    .tactical-deck-row {
+      background: transparent;
+      border: none;
+      border-bottom: var(--border-thin);
+      padding: 20px;
+      display: grid;
+      grid-template-columns: 0.2fr 1.8fr;
+      align-items: center;
+      cursor: pointer;
+      text-align: left;
+      transition: var(--transition-standard);
+      position: relative;
+    }
+
+    .tactical-deck-row::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: var(--gold-gradient);
+      transform: scaleY(0);
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .tactical-deck-row:hover {
+      background: rgba(197, 160, 89, 0.015);
+      padding-left: 24px;
+    }
+
+    .tactical-deck-row.active {
+      background: rgba(197, 160, 89, 0.03);
+      border-bottom: 1px solid rgba(197, 160, 89, 0.25);
+    }
+
+    .tactical-deck-row.active::before {
+      transform: scaleY(1);
+    }
+
+    .tactical-deck-row .row-idx {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--text-dark);
+    }
+
+    .tactical-deck-row.active .row-idx {
+      color: var(--gold-bright);
+    }
+
+    .tactical-deck-row .row-name {
+      font-family: var(--font-sans);
+      font-size: 1.05rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      letter-spacing: 0.01em;
+    }
+
+    .tactical-deck-row.active .row-name {
+      color: var(--text-main);
+    }
+
+    /* Custom corporate sliders */
+    .tactical-slider-container {
+      position: relative;
+      margin-top: 6px;
+    }
+
+    .tactical-slider {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 100%;
+      height: 2px;
+      background: var(--text-dark);
+      outline: none;
+      cursor: pointer;
+    }
+
+    .tactical-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 14px;
+      height: 14px;
+      background: var(--gold-gradient);
+      border: 1px solid var(--bg-base);
+      cursor: pointer;
+      transition: var(--transition-standard);
+    }
+
+    .tactical-slider::-webkit-slider-thumb:hover {
+      background: var(--text-main);
+      transform: scale(1.15);
+      box-shadow: 0 0 10px rgba(197, 160, 89, 0.4);
+    }
+
+    .slider-scale-ticks {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+      font-family: var(--font-sans);
+      font-weight: 600;
+      font-size: 0.68rem;
+      color: var(--text-dark);
+    }
+
+    /* Proposal console panel output */
+    .planner-console-panel {
+      padding: 60px 48px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: rgba(10, 11, 13, 0.3);
+    }
+
+    .console-header {
+      border-bottom: var(--border-thin);
+      padding-bottom: 24px;
+      margin-bottom: 30px;
+    }
+
+    .console-header h3 {
+      font-family: var(--font-sans);
+      font-size: 2rem;
+      font-weight: 800;
+      margin-top: 10px;
+      text-transform: uppercase;
+    }
+
+    .console-desc {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      margin-bottom: 36px;
+      line-height: 1.6;
+    }
+
+    .console-spec-matrix {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      border-bottom: var(--border-thin);
+      padding-bottom: 36px;
+      margin-bottom: 36px;
+    }
+
+    .matrix-row {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      font-size: 0.85rem;
+    }
+
+    .matrix-row .label {
+      font-family: var(--font-sans);
+      font-weight: 600;
+      text-transform: uppercase;
+      color: var(--text-dark);
+      letter-spacing: 0.04em;
+    }
+
+    .matrix-row .value {
+      font-family: var(--font-sans);
+      color: var(--text-main);
+      font-weight: 600;
+      text-align: right;
+    }
+
+    @media (max-width: 991px) {
+      .planner-grid {
+        grid-template-columns: 1fr;
+      }
+      .planner-control-deck {
+        padding: 40px 24px;
+        border-right: none;
+      }
+      .planner-console-panel {
+        padding: 40px 24px;
+        border-top: var(--border-thin);
+      }
+    }
+
+    /* ==========================================================================
+       STORY & COMPLIANCE BADGE
+       ========================================================================== */
+    .story-sec {
+      background: var(--bg-base);
+      border-bottom: var(--border-thin);
+    }
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+    }
+
+    .story-left-col {
+      padding-block: 100px;
+      padding-right: 48px;
+      border-right: var(--border-thin);
+    }
+
+    .story-left-col h2 {
+      font-family: var(--font-sans);
+      font-size: clamp(1.8rem, 4vw, 3.2rem);
+      font-weight: 800;
+      margin-block: 16px 28px;
+      text-transform: uppercase;
+    }
+
+    .story-left-col p {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      margin-bottom: 28px;
+      line-height: 1.65;
+    }
+
+    .story-right-col {
+      padding-block: 100px;
+      padding-left: 48px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .badge-monolithic-box {
+      border: var(--border-gold);
+      padding: 40px;
+      background: rgba(16, 18, 22, 0.6);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      width: 100%;
+      max-width: 360px;
+      text-align: center;
+      position: relative;
+      transition: var(--transition-standard);
+    }
+
+    .badge-monolithic-box:hover {
+      border-color: var(--gold-bright);
+      box-shadow: 0 20px 50px rgba(197, 160, 89, 0.06), inset 0 0 20px rgba(197, 160, 89, 0.02);
+      transform: translateY(-3px);
+    }
+
+    .badge-svg-container {
+      width: 120px;
+      height: 120px;
+      margin: 0 auto 24px;
+    }
+
+    .badge-title {
+      font-family: var(--font-sans);
+      font-weight: 800;
+      font-size: 1.3rem;
+      color: var(--text-main);
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+    }
+
+    .badge-sub {
+      font-family: var(--font-sans);
+      font-weight: 700;
+      font-size: 0.72rem;
+      color: var(--gold-bright);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 991px) {
+      .story-grid {
+        grid-template-columns: 1fr;
+      }
+      .story-left-col {
+        padding-right: 0;
+        border-right: none;
+        padding-block: 60px 24px;
+      }
+      .story-right-col {
+        padding-left: 0;
+        padding-block: 24px 60px;
+        border-top: var(--border-thin);
+      }
+    }
+
+    /* ==========================================================================
+       CREDENTIALS DATA TABLE
+       ========================================================================== */
+    .table-sec {
+      padding-block: 60px;
+      border-bottom: var(--border-thin);
+      background: #090a0c;
+    }
+
+    .tactical-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+      text-align: left;
+    }
+
+    .tactical-table th, .tactical-table td {
+      padding: 20px 24px;
+      border-bottom: var(--border-thin);
+    }
+
+    .tactical-table th {
+      font-family: var(--font-sans);
+      font-weight: 700;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--text-dark);
+    }
+
+    .tactical-table tbody tr {
+      transition: var(--transition-standard);
+    }
+
+    .tactical-table tbody tr:hover {
+      background: rgba(255, 255, 255, 0.015);
+    }
+
+    .tactical-table td.header-col {
+      font-family: var(--font-sans);
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: var(--text-main);
+    }
+
+    .tactical-table td.details-col {
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+
+    .tactical-table td.status-col {
+      font-family: var(--font-sans);
+      font-weight: 700;
+      font-size: 0.72rem;
+      color: var(--gold-bright);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    @media (max-width: 768px) {
+      .tactical-table th:nth-child(2), .tactical-table td:nth-child(2) {
+        display: none;
+      }
+    }
+
+    /* ==========================================================================
+       WHY US (PILLARS)
+       ========================================================================== */
+    .pillars-sec {
+      background: var(--bg-base);
+      border-bottom: var(--border-thin);
+    }
+
+    .pillars-editorial-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .pillar-card {
+      border-right: var(--border-thin);
+      padding: 60px 30px;
+      position: relative;
+      transition: var(--transition-standard);
+    }
+
+    .pillar-card:hover {
+      background: rgba(255, 255, 255, 0.01);
+      transform: translateY(-3px);
+    }
+
+    .pillar-card:last-child {
+      border-right: none;
+    }
+
+    .pillar-card:nth-child(1) {
+      padding-left: 0;
+    }
+
+    .pillar-number {
+      font-family: var(--font-serif);
+      font-size: 3rem;
+      font-style: italic;
+      color: var(--gold-primary);
+      margin-bottom: 18px;
+      line-height: 1;
+      opacity: 0.85;
+    }
+
+    .pillar-card h3 {
+      font-family: var(--font-sans);
+      font-weight: 700;
+      font-size: 1.25rem;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+
+    .pillar-card p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    @media (max-width: 991px) {
+      .pillars-editorial-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .pillar-card {
+        padding: 40px 24px;
+        border-bottom: var(--border-thin);
+      }
+      .pillar-card:nth-child(even) {
+        border-right: none;
+      }
+      .pillar-card:nth-child(3), .pillar-card:nth-child(4) {
+        border-bottom: none;
+      }
+      .pillar-card:nth-child(1), .pillar-card:nth-child(3) {
+        padding-left: 24px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .pillars-editorial-grid {
+        grid-template-columns: 1fr;
+      }
+      .pillar-card {
+        border-right: none !important;
+        border-bottom: var(--border-thin) !important;
+        padding-inline: 0 !important;
+      }
+      .pillar-card:last-child {
+        border-bottom: none !important;
+      }
+    }
+
+    /* ==========================================================================
+       CONTACT & LOCATION DIRECTORY
+       ========================================================================== */
+    .contact-sec {
+      background: var(--bg-base);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+    }
+
+    .contact-form-col {
+      padding-block: 80px;
+      padding-right: 48px;
+      border-right: var(--border-thin);
+    }
+
+    .contact-form-col h2 {
+      font-family: var(--font-sans);
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+
+    .contact-form-col p.desc {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      margin-bottom: 44px;
+    }
+
+    .tactical-form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px 24px;
+    }
+
+    .span-full-width {
+      grid-column: span 2;
+    }
+
+    .input-field-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .input-field-group label {
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-dark);
+    }
+
+    .tactical-input {
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+      padding: 12px 0;
+      color: var(--text-main);
+      font-family: var(--font-sans);
+      font-size: 0.95rem;
+      transition: var(--transition-standard);
+      width: 100%;
+    }
+
+    .tactical-input:focus {
+      outline: none;
+      border-color: var(--gold-primary);
+      box-shadow: 0 4px 12px -4px rgba(197, 160, 89, 0.1);
+    }
+
+    .tactical-input:user-invalid {
+      border-color: #c94a4a;
+    }
+    .tactical-input:user-valid:not(:placeholder-shown) {
+      border-color: var(--gold-primary);
+    }
+
+    textarea.tactical-input {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .contact-directory-col {
+      padding-block: 80px;
+      padding-left: 48px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .contact-directory-col h3 {
+      font-family: var(--font-sans);
+      font-size: 1.7rem;
+      font-weight: 800;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+
+    .hq-directory-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 36px;
+      margin-block: 40px;
+    }
+
+    .directory-item {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      text-decoration: none;
+    }
+
+    .directory-item span.label {
+      font-family: var(--font-sans);
+      font-weight: 700;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      color: var(--text-dark);
+      letter-spacing: 0.08em;
+    }
+
+    .directory-item span.value-serif {
+      font-family: var(--font-sans);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--text-main);
+      transition: var(--transition-standard);
+    }
+
+    a.directory-item:hover span.value-serif {
+      color: var(--gold-bright);
+    }
+
+    .legal-dispatch-notice {
+      border-top: var(--border-thin);
+      padding-top: 30px;
+      font-family: var(--font-sans);
+      font-weight: 600;
+      font-size: 0.68rem;
+      color: var(--text-dark);
+      letter-spacing: 0.02em;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 991px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+      .contact-form-col {
+        padding-right: 0;
+        border-right: none;
+        padding-block: 60px 30px;
+      }
+      .contact-directory-col {
+        padding-left: 0;
+        padding-block: 30px 60px;
+        border-top: var(--border-thin);
+      }
+    }
+
+    @media (max-width: 576px) {
+      .tactical-form {
+        grid-template-columns: 1fr;
+      }
+      .span-full-width {
+        grid-column: span 1;
+      }
+    }
+
+    /* ==========================================================================
+       FOOTER
+       ========================================================================== */
+    footer {
+      background: #090a0c;
+      border-top: var(--border-thin);
+      padding-block: 60px 40px;
+    }
+
+    .footer-main-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 28px;
+      border-bottom: var(--border-thin);
+      padding-bottom: 40px;
+      margin-bottom: 28px;
+    }
+
+    .footer-nav-deck {
+      display: flex;
+      gap: 32px;
+    }
+
+    .footer-nav-deck a {
+      font-family: var(--font-sans);
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: var(--transition-standard);
+    }
+
+    .footer-nav-deck a:hover {
+      color: var(--gold-bright);
+    }
+
+    .footer-legal-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-family: var(--font-sans);
+      font-weight: 500;
+      font-size: 0.68rem;
+      color: var(--text-dark);
+      letter-spacing: 0.02em;
+    }
+
+    /* prefers-reduced-motion constraints */
+    @media (prefers-reduced-motion: reduce) {
+      .reveal-element {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+      }
+      .ticker-track {
+        animation-duration: 60s !important;
+      }
+      html {
+        scroll-behavior: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============ NAV HEADER ============ -->
+  <header id="site-header">
+    <div class="container nav-flex">
+      <a href="#top" class="logo-block" aria-label="North Dallas Security &amp; Protective Services home">
+        <!-- SVG brand shield with scales of justice (matches business card) -->
+        <svg class="logo-icon-svg" viewBox="0 0 100 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="logo-gold-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="var(--gold-dark)"/>
+              <stop offset="40%" stop-color="var(--gold-primary)"/>
+              <stop offset="100%" stop-color="var(--gold-bright)"/>
+            </linearGradient>
+          </defs>
+          <!-- Filled shield -->
+          <path d="M50 6 L92 20 V52 C92 78 74 94 50 102 C26 94 8 78 8 52 V20 L50 6 Z" fill="url(#logo-gold-grad)" opacity="0.15"/>
+          <path d="M50 6 L92 20 V52 C92 78 74 94 50 102 C26 94 8 78 8 52 V20 L50 6 Z" stroke="url(#logo-gold-grad)" stroke-width="4" fill="none" stroke-linejoin="round"/>
+          <!-- Pillar -->
+          <rect x="47" y="32" width="6" height="40" rx="1" fill="url(#logo-gold-grad)"/>
+          <!-- Base -->
+          <rect x="38" y="70" width="24" height="5" rx="1" fill="url(#logo-gold-grad)"/>
+          <!-- Crossbeam -->
+          <rect x="26" y="38" width="48" height="5" rx="1" fill="url(#logo-gold-grad)"/>
+          <!-- Left pan -->
+          <path d="M28,43 L20,58 H36 Z" fill="url(#logo-gold-grad)" opacity="0.85"/>
+          <!-- Right pan -->
+          <path d="M72,43 L64,58 H80 Z" fill="url(#logo-gold-grad)" opacity="0.85"/>
+          <!-- Top circle -->
+          <circle cx="50" cy="30" r="5" fill="url(#logo-gold-grad)"/>
+        </svg>
+        <span class="logo-text">
+          <b>North Dallas</b>
+          <span>Security &amp; Protective Services</span>
+        </span>
+      </a>
+
+      <nav class="nav-links-deck">
+        <a href="#services">Security Services</a>
+        <a href="#planner">Blueprint Planner</a>
+        <a href="#story">DPS Compliance</a>
+        <a href="#why">Pillars</a>
+        <a href="#contact">Contact HQ</a>
+      </nav>
+
+      <span class="header-license-label">TX License # C31175201</span>
+
+      <a href="tel:14694874457" class="btn-action">Call Dispatch</a>
+
+      <button class="menu-trigger" id="mobile-nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Panel -->
+  <div class="mobile-overlay-menu" id="mobile-nav-overlay">
+    <a href="#services">Services</a>
+    <a href="#planner">Planner</a>
+    <a href="#story">Compliance</a>
+    <a href="#why">Pillars</a>
+    <a href="#contact">Contact</a>
+    <a href="tel:14694874457" class="btn-action btn-action-solid" style="margin-top: 25px;">Request Detail</a>
+  </div>
+
+  <!-- ============ HERO SECTION ============ -->
+  <section class="hero-sec" id="top">
+    <div class="hero-grid">
+      <div class="hero-left-col">
+        <!-- Vertical license bar floating in the left margin (hidden on mobile) -->
+        <div class="vertical-license-bar">
+          <span>TX PSB LICENSE C31175201</span>
+          <span class="bar-divider"></span>
+          <span>REGULATED BY TEXAS DPS</span>
+        </div>
+        <div class="hero-left-content">
+          <span class="badge-tag reveal-element">Active On-Site Security Guards. No No-Shows. No Fluff.</span>
+          <h1 class="reveal-element">
+            <span class="hero-subheading">Dallas Security Guard Company</span>
+            <span class="hero-main-title">Security Guard</span>
+            <span class="hero-italic-title">Services Dallas &amp; Fort Worth</span>
+          </h1>
+          <p class="lead-summary reveal-element">Cheap guard companies win contracts by underpaying guards. The result? Unreliable guards who sleep on duty or don't show up at all, leaving your property wide open. When copper thieves strip your building, vandals smash your doors, or your expensive contractor tools get stolen, cheap security costs you thousands. We deploy licensed, reliable security guards who actually show up, patrol your perimeter, and keep your property and loved ones safe. Real security, zero fluff.</p>
+          <div class="hero-cta-deck reveal-element">
+            <a href="#contact" class="btn-action btn-action-solid">Initiate a 2-Week Pilot</a>
+            <a href="#services" class="btn-action">Compare Our Standards</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Right: Absolute-fill photo, overlay, badge, caption -->
+      <div class="hero-right-col reveal-element">
+        <img class="hero-image-fill" src="hero_security_guards_color.png" alt="Texas licensed armed and unarmed security guards standing watch outside a facility" loading="eager" />
+        <div class="hero-right-overlay"></div>
+
+        <div class="hero-floating-badge">
+          <div class="badge-dot"></div>
+          <div class="badge-content">
+            <span class="badge-num">24/7 ACTIVE</span>
+            <span class="badge-lbl">DPS Guard Dispatch</span>
+          </div>
+        </div>
+
+        <div class="hero-right-meta-caption">
+          <div class="luxury-caption-card">
+            <h4>Licensed &amp; Insured</h4>
+            <p>TX Security License # C31175201</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SUBTLE CORPORATE STRIP ============ -->
+  <div class="ticker-bar">
+    <div class="ticker-track">
+      <span>Armed Guards</span>
+      <span>Unarmed Building Guards</span>
+      <span>Club &amp; Party Guarding</span>
+      <span>On-Site Night Guards</span>
+      <span>Randomized Mobile Patrols</span>
+      <span>Construction Site Guards</span>
+      <span>Storefront Guarding</span>
+      <span>Office &amp; Lobby Guarding</span>
+      <!-- Repeated for looping seamlessness -->
+      <span>Armed Guards</span>
+      <span>Unarmed Building Guards</span>
+      <span>Club &amp; Party Guarding</span>
+      <span>On-Site Night Guards</span>
+      <span>Randomized Mobile Patrols</span>
+      <span>Construction Site Guards</span>
+      <span>Storefront Guarding</span>
+      <span>Office &amp; Lobby Guarding</span>
+    </div>
+  </div>
+
+  <!-- ============ SERVICES SECTION ============ -->
+  <section class="section-pad" id="services">
+    <div class="container">
+      <div class="section-editorial-header reveal-element">
+        <h2>DFW Security Guard <span class="corporate-italic">Services</span></h2>
+        <p>Stop worrying about stolen tools, copper theft, and break-ins. We deploy licensed, alert guards to patrol your property, lock down your gates, and protect your assets 24/7.</p>
+      </div>
+
+      <div class="wire-grid-container">
+        <!-- Spotlight Card: Executive Protection Details -->
+        <div class="featured-wire-block reveal-element">
+          <div class="featured-wire-left">
+            <span class="section-label">[ Vetted Protection ]</span>
+            <h3>Guards Who Actually Show Up &amp; Protect Your Property</h3>
+            <p>If a security guard doesn't show up for a shift, your property is left wide open to trespassers and thieves. We protect your buildings, construction sites, and warehouses with reliable, supervisor-audited guards. We verify attendance and active patrols so your tools don't get stolen, your copper stays in the walls, and your facilities stay secure.</p>
+            <ul class="luxury-bullet-stack">
+              <li>Texas DPS licensed security guards standing watch on your property</li>
+              <li>Clear, site-specific guard instructions to lock gates and check perimeters</li>
+              <li>Late-night supervisor spot checks to make sure guards are awake and active</li>
+            </ul>
+          </div>
+          <div class="featured-wire-right">
+            <div class="featured-wire-right-info">
+              <h4>Vetted &amp; Background Checked</h4>
+              <p>Every single guard is fully licensed, fingerprinted, and verified through the Texas Department of Public Safety (DPS) registry before dispatch.</p>
+            </div>
+            <a href="#contact" class="btn-action" style="align-self: flex-start;">Initiate Pilot Program</a>
+          </div>
+        </div>
+
+        <!-- 8 Corporate Service Cards representing all brand services -->
+        <div class="services-wire-grid">
+          <div class="wire-column-card reveal-element">
+            <span class="section-label">[ 01 / Armed ]</span>
+            <h3>Armed Security Guards</h3>
+            <p>Vetted armed guards who stand watch at your facility, commercial property, or warehouse to stop break-ins, deter thieves, and prevent theft of expensive tools or equipment.</p>
+          </div>
+
+          <div class="wire-column-card reveal-element">
+            <span class="section-label">[ 02 / Unarmed ]</span>
+            <h3>Lobby &amp; Building Guards</h3>
+            <p>Reliable guards stationed at your building's doors and lobbies to control entry, keep out trespassers, check badges, and protect your staff and assets from harm.</p>
+          </div>
+
+          <div class="wire-column-card reveal-element">
+            <span class="section-label">[ 03 / Clubs &amp; Parties ]</span>
+            <h3>Club &amp; Private Party Guards</h3>
+            <p>Commanding guards to manage crowds, check IDs at the door, prevent fights, and ensure your private parties and venues remain safe and orderly.</p>
+          </div>
+
+          <div class="wire-column-card reveal-element">
+            <span class="section-label">[ 04 / Patrols ]</span>
+            <h3>Mobile Patrol Guards</h3>
+            <p>Guards driving marked vehicles to check your property's doors, gates, and perimeters throughout the night, stopping break-ins before they happen.</p>
+          </div>
+
+          <div class="wire-column-card reveal-element">
+            <span class="section-label">[ 05 / Logistics ]</span>
+            <h3>Warehouse &amp; Cargo Yard Guards</h3>
+            <p>Guards patrolling cargo bays and securing your fence line to stop copper theft, stolen inventory, and trailer break-ins after hours.</p>
+          </div>
+
+          <div class="wire-column-card reveal-element">
+            <span class="section-label">[ 06 / Sites ]</span>
+            <h3>Construction Site Guards</h3>
+            <p>Guards stationed on-site to stop copper theft, vandalism, and the theft of heavy machinery, materials, and expensive contractor tools.</p>
+          </div>
+
+          <div class="wire-column-card reveal-element">
+            <span class="section-label">[ 07 / Retail &amp; Storefront ]</span>
+            <h3>Retail Storefront Guards</h3>
+            <p>On-site guards stationed at your storefront, plaza, or parking lot to deter shoplifters, stop vandalism, and make sure your customers feel safe.</p>
+          </div>
+
+          <div class="wire-column-card reveal-element">
+            <span class="section-label">[ 08 / Fire Watch ]</span>
+            <h3>Emergency Fire Watch Guards</h3>
+            <p>Dispatched guards who walk your facility to watch for fire hazards when your alarms or sprinkler systems are down, keeping your property safe and open.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECURITY PLANNER CONSOLE ============ -->
+  <section class="section-pad planner-sec" id="planner">
+    <div class="container">
+      <div class="section-editorial-header reveal-element">
+        <h2>Dallas Security Guard <span class="corporate-italic">Deployment Planner</span></h2>
+        <p>Build your on-site security plan. Choose the guarding profile, set your shift hours, and select the number of guards needed to protect your property.</p>
+      </div>
+
+      <div class="planner-card reveal-element">
+        <div class="planner-grid">
+          <!-- Control Panel Deck -->
+          <div class="planner-control-deck">
+            <!-- 1. Posture Buttons -->
+            <div class="deck-group">
+              <label class="deck-label">1. Select Guarding Profile</label>
+              <div class="tactical-selector-deck" role="radiogroup" aria-label="Select Service Profile">
+                <button class="tactical-deck-row active" data-tier="patrol" role="radio" aria-checked="true">
+                  <span class="row-idx">[ 01 ]</span>
+                  <span class="row-name">Randomized Property Patrols</span>
+                </button>
+                <button class="tactical-deck-row" data-tier="unarmed" role="radio" aria-checked="false">
+                  <span class="row-idx">[ 02 ]</span>
+                  <span class="row-name">Static Building &amp; Lobby Guards</span>
+                </button>
+                <button class="tactical-deck-row" data-tier="armed" role="radio" aria-checked="false">
+                  <span class="row-idx">[ 03 ]</span>
+                  <span class="row-name">Armed Guard Security</span>
+                </button>
+                <button class="tactical-deck-row" data-tier="executive" role="radio" aria-checked="false">
+                  <span class="row-idx">[ 04 ]</span>
+                  <span class="row-name">Club &amp; Private Event Guarding</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- 2. Scale Personnel Slider -->
+            <div class="deck-group">
+              <label class="deck-label" for="scale-slider">
+                2. Scale Personnel Assets
+                <span class="calculated-val" id="scale-count-output">1 Guard</span>
+              </label>
+              <div class="tactical-slider-container">
+                <input type="range" class="tactical-slider" id="scale-slider" min="1" max="10" value="1" aria-valuemin="1" aria-valuemax="10" aria-valuenow="1" />
+                <div class="slider-scale-ticks">
+                  <span>1 Guard</span>
+                  <span>4 Guards</span>
+                  <span>7 Guards</span>
+                  <span>10+ Guard Detail</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 3. Duration Slider -->
+            <div class="deck-group">
+              <label class="deck-label" for="schedule-slider">
+                3. Deployment Shift Duration
+                <span class="calculated-val" id="schedule-output">4 Hours</span>
+              </label>
+              <div class="tactical-slider-container">
+                <input type="range" class="tactical-slider" id="schedule-slider" min="4" max="24" step="2" value="4" aria-valuemin="4" aria-valuemax="24" aria-valuenow="4" />
+                <div class="slider-scale-ticks">
+                  <span>4 hrs (Min)</span>
+                  <span>8 hrs (Shift)</span>
+                  <span>12 hrs</span>
+                  <span>18 hrs</span>
+                  <span>24 hrs (Full-cycle)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Console Output Panel -->
+          <div class="planner-console-panel" aria-live="polite">
+            <div>
+              <div class="console-header">
+                <span class="section-label" id="console-deterrent-tag">MOBILE PATROL DETERRENT</span>
+                <h3 id="console-title-output">Randomized Mobile Patrols</h3>
+              </div>
+              <p class="console-desc" id="console-desc-output">Randomized vehicle patrol sweeps, perimeter fence check-ins, and neighborhood sweeps. Coordinated via GPS checkpoints. Ideal for eliminating predictable patterns that trespassers exploit.</p>
+              
+              <div class="console-spec-matrix">
+                <div class="matrix-row">
+                  <span class="label">GUARD LICENSE:</span>
+                  <span class="value" id="spec-dps">Texas DPS Licensed Guard</span>
+                </div>
+                <div class="matrix-row">
+                  <span class="label">PRIMARY GOAL:</span>
+                  <span class="value" id="spec-gear">Stop Break-Ins &amp; Theft</span>
+                </div>
+                <div class="matrix-row">
+                  <span class="label">SUPERVISION:</span>
+                  <span class="value" id="spec-comms">Random Field Supervisor Audits</span>
+                </div>
+                <div class="matrix-row" style="border-top: 1px dashed rgba(255, 255, 255, 0.1); padding-top: 14px;">
+                  <span class="label" style="color: var(--gold-bright); font-family: var(--font-sans);">PROPOSAL BLUEPRINT:</span>
+                  <span class="value" id="spec-matrix-calculation" style="color: var(--gold-bright);">1 Guard / 4h deployment</span>
+                </div>
+              </div>
+            </div>
+
+            <a href="#contact" class="btn-action btn-action-solid" style="width: 100%; text-align: center;" id="lock-blueprint-btn">Lock in Blueprint &amp; Initiate Pilot</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ STORY / COMPLIANCE SECTION ============ -->
+  <section class="section-pad story-sec" id="story">
+    <div class="container story-grid">
+      <div class="story-left-col reveal-element">
+        <h2>Dallas Security Guard <span class="corporate-italic">Protection Standards</span></h2>
+        <p>If you run a construction site, warehouse, commercial building, or retail storefront, your biggest threat is theft and damage. Copper thieves can strip your building's wiring in hours. Intruders can break in, smash your doors, and steal expensive machinery and contractor tools. Worse, your staff or loved ones can get hurt if an aggressive trespasser enters your site when no one is watching.</p>
+        <p>We protect you from these failures. North Dallas Security &amp; Protective Services provides fully licensed, background-checked, and active security guards who actually stand watch, patrol your perimeter, and stop crime. Every guard is registered on the Texas DPS database (TOPS) and has cleared FBI-level fingerprint screenings, ensuring honest, reliable protection you can trust.</p>
+      </div>
+
+      <div class="story-right-col reveal-element">
+        <!-- Monolithic Gold Shield Emblem Widget matching the uploaded banner -->
+        <div class="badge-monolithic-box">
+          <div class="badge-svg-container">
+            <svg viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Wreath Left & Right Laurel Leaves -->
+              <g stroke="var(--gold-muted)" stroke-width="1.5" stroke-linecap="round">
+                <!-- Left branch -->
+                <path d="M35 110c-15-18-12-52 4-75" />
+                <path d="M28 102l-4-3M26 88l-5-2M27 74l-5 1M31 60l-4 3M38 48l-3 4" />
+                <!-- Right branch -->
+                <path d="M105 110c15-18 12-52-4-75" />
+                <path d="M112 102l4-3M114 88l5-2M113 74l5 1M109 60l4 3M102 48l3 4" />
+              </g>
+              <!-- Shield Outline with metallic gold gradient -->
+              <path d="M70 18c18-5 35-10 44-5 0 30 5 60-44 85C26 73 26 43 26 13c9-5 26 0 44 5z" stroke="var(--gold-primary)" stroke-width="3" fill="var(--bg-panel)"/>
+              <path d="M70 22c15-4 30-8 38-4 0 25 4 51-38 72C32 72 32 46 32 21c8-4 23 0 38 4z" stroke="var(--gold-muted)" stroke-width="1" />
+              
+              <!-- Text: STATE LICENSED -->
+              <text x="70" y="38" fill="var(--gold-bright)" font-family="var(--font-sans)" font-size="7.2" font-weight="900" letter-spacing="0.1em" text-anchor="middle">STATE LICENSED</text>
+              
+              <!-- Star Symbol -->
+              <path d="M70 44l1.5 3 3.5.5-2.5 2.5.5 3.5-3-2-3 2 .5-3.5-2.5-2.5 3.5-.5z" fill="var(--gold-primary)" />
+              
+              <!-- License Number C31175201 -->
+              <text x="70" y="66" fill="var(--text-main)" font-family="var(--font-sans)" font-size="11.5" font-weight="900" letter-spacing="0.03em" text-anchor="middle">C31175201</text>
+              
+              <!-- Text: LICENSED & INSURED -->
+              <text x="70" y="79" fill="var(--gold-muted)" font-family="var(--font-sans)" font-size="6" font-weight="700" letter-spacing="0.08em" text-anchor="middle">LICENSED</text>
+              <text x="70" y="86" fill="var(--gold-muted)" font-family="var(--font-sans)" font-size="6" font-weight="700" letter-spacing="0.08em" text-anchor="middle">&amp; INSURED</text>
+            </svg>
+          </div>
+          <h3 class="badge-title">State Vetted Shield</h3>
+          <p class="badge-sub">100% TOPS VERIFIED</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CREDENTIALS GRID TABLE ============ -->
+  <section class="table-sec">
+    <div class="container">
+      <table class="tactical-table reveal-element" aria-label="North Dallas Security &amp; Protective Services Credentials and Compliance Grid">
+        <thead>
+          <tr>
+            <th scope="col">Audit Metric</th>
+            <th scope="col">Our Strict Standards</th>
+            <th scope="col">Verification Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="header-col">Licensed &amp; Vetted Guards</td>
+            <td class="details-col">Every guard is background checked and licensed by the Texas Department of Public Safety (DPS). No unverified or unvetted labor.</td>
+            <td class="status-col">100% TOPS Verified</td>
+          </tr>
+          <tr>
+            <td class="header-col">Vandalism &amp; Theft Protection</td>
+            <td class="details-col">Fully insured and licensed guard details designed to stop copper theft, stolen tools, and property break-ins.</td>
+            <td class="status-col">Fully Protected</td>
+          </tr>
+          <tr>
+            <td class="header-col">Documented Patrol Logs</td>
+            <td class="details-col">Guards log every perimeter sweep, gate lock, and door check, giving you clear proof of their presence on your property.</td>
+            <td class="status-col">Patrols Audited</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ============ WHY US (PILLARS) ============ -->
+  <section class="section-pad pillars-sec" id="why">
+    <div class="container">
+      <div class="section-editorial-header reveal-element">
+        <h2>Dallas Guard Company <span class="corporate-italic">Operational Standards</span></h2>
+        <p>Four non-negotiable standards that keep your property secure and ensure our guards are doing their job.</p>
+      </div>
+
+      <div class="pillars-editorial-grid">
+        <div class="pillar-card reveal-element">
+          <div class="pillar-number">01</div>
+          <h3>Clear Guard Instructions</h3>
+          <p>Every guard has site-specific instructions on what to watch, how to patrol, and how to respond if a break-in occurs. Zero guesswork on your property.</p>
+        </div>
+
+        <div class="pillar-card reveal-element">
+          <div class="pillar-number">02</div>
+          <h3>Verified Patrol Logs</h3>
+          <p>We log every door check, gate lock, and sweep of your property. You get real, documented proof that our guards are active and on watch all night.</p>
+        </div>
+
+        <div class="pillar-card reveal-element">
+          <div class="pillar-number">03</div>
+          <h3>Active Patrol Audits</h3>
+          <p>Our field supervisors make unannounced, late-night visits to your property to verify that your guards are awake, alert, and protecting your assets.</p>
+        </div>
+
+        <div class="pillar-card reveal-element">
+          <div class="pillar-number">04</div>
+          <h3>Licensed &amp; Vetted Guards</h3>
+          <p>We never hire unvetted labor. Every guard is registered on the Texas DPS database (TOPS) and has cleared an FBI fingerprint background check.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT & DIRECTORY SECTION ============ -->
+  <section class="section-pad contact-sec" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <!-- Threat Form -->
+        <div class="contact-form-col reveal-element">
+          <h2>Hire Security Guards in <span class="corporate-italic">Dallas &amp; DFW</span></h2>
+          <p class="desc">Stop paying for warm bodies. Establish a low-risk 2-to-4 week pilot program to test our attendance, supervisor check-ins, and daily reporting quality before committing to a contract.</p>
+          
+          <form id="threat-form" class="tactical-form" onsubmit="event.preventDefault(); alert('Security request received. A security coordinator will contact you within 2 hours.');">
+            <div class="input-field-group">
+              <label for="contact-name">Full Name *</label>
+              <input type="text" id="contact-name" class="tactical-input" placeholder="Charles Johnson" required />
+            </div>
+            
+            <div class="input-field-group">
+              <label for="contact-email">Email Address *</label>
+              <input type="email" id="contact-email" class="tactical-input" placeholder="cjohnson@firm.com" required />
+            </div>
+            
+            <div class="input-field-group">
+              <label for="contact-phone">Phone line *</label>
+              <input type="tel" id="contact-phone" class="tactical-input" placeholder="(469) 487-4457" required />
+            </div>
+            
+            <div class="input-field-group">
+              <label for="contact-company">Business or Property Name</label>
+              <input type="text" id="contact-company" class="tactical-input" placeholder="e.g., Oakridge Estate or Legacy Retail LLC" />
+            </div>
+            
+            <div class="input-field-group span-full-width">
+              <label for="contact-blueprint-selected">Selected Security Blueprint</label>
+              <input type="text" id="contact-blueprint-selected" class="tactical-input" readonly />
+            </div>
+            
+            <div class="input-field-group span-full-width">
+              <label for="contact-threat-notes">Security Vulnerabilities &amp; Notes</label>
+              <textarea id="contact-threat-notes" class="tactical-input" placeholder="Describe your current security vulnerabilities (e.g., unreliable guards, guard no-shows, lack of reporting, high inventory shrinkage)..."></textarea>
+            </div>
+            
+            <div class="span-full-width" style="margin-top: 20px;">
+              <button type="submit" class="btn-action btn-action-solid" style="width: 100%;">Initiate Performance Pilot</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Location Directory -->
+        <div class="contact-directory-col reveal-element">
+          <div>
+            <h3>Operations Directory</h3>
+            <p style="font-size: 0.95rem; color: var(--text-muted);">Direct channels for emergency dispatches, assessment modifications, or detail updates.</p>
+            
+            <div class="hq-directory-stack">
+              <div class="directory-item">
+                <span class="label">Operations HQ Address</span>
+                <span class="value-serif">Shops at Legacy</span>
+                <span style="font-family: var(--font-sans); font-size: 0.72rem; color: var(--text-muted); margin-top: 4px; font-weight: 600;">5851 Legacy Circle, Plano, TX 75024</span>
+              </div>
+              
+              <a href="tel:14694874457" class="directory-item">
+                <span class="label">Emergency Dispatch Phone</span>
+                <span class="value-serif">(469) 487-4457</span>
+              </a>
+              
+              <a href="mailto:info@ndsps.com" class="directory-item">
+                <span class="label">Secure Email Registry</span>
+                <span class="value-serif">info@ndsps.com</span>
+              </a>
+              
+              <div class="directory-item">
+                <span class="label">Active Coverage Area</span>
+                <span class="value-serif">Dallas–Fort Worth Metroplex</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="legal-dispatch-notice">
+            Fully Licensed &amp; Insured.<br />
+            Regulated by the Texas Department of Public Safety Private Security Board.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer>
+    <div class="container">
+      <div class="footer-main-flex">
+        <a href="#top" class="logo-block" aria-label="North Dallas Security &amp; Protective Services home">
+          <svg class="logo-icon-svg" viewBox="0 0 100 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="logo-gold-grad-footer" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="var(--gold-dark)"/>
+                <stop offset="40%" stop-color="var(--gold-primary)"/>
+                <stop offset="100%" stop-color="var(--gold-bright)"/>
+              </linearGradient>
+            </defs>
+            <path d="M50 6 L92 20 V52 C92 78 74 94 50 102 C26 94 8 78 8 52 V20 L50 6 Z" fill="url(#logo-gold-grad-footer)" opacity="0.15"/>
+            <path d="M50 6 L92 20 V52 C92 78 74 94 50 102 C26 94 8 78 8 52 V20 L50 6 Z" stroke="url(#logo-gold-grad-footer)" stroke-width="4" fill="none" stroke-linejoin="round"/>
+            <rect x="47" y="32" width="6" height="40" rx="1" fill="url(#logo-gold-grad-footer)"/>
+            <rect x="38" y="70" width="24" height="5" rx="1" fill="url(#logo-gold-grad-footer)"/>
+            <rect x="26" y="38" width="48" height="5" rx="1" fill="url(#logo-gold-grad-footer)"/>
+            <path d="M28,43 L20,58 H36 Z" fill="url(#logo-gold-grad-footer)" opacity="0.85"/>
+            <path d="M72,43 L64,58 H80 Z" fill="url(#logo-gold-grad-footer)" opacity="0.85"/>
+            <circle cx="50" cy="30" r="5" fill="url(#logo-gold-grad-footer)"/>
+          </svg>
+          <span class="logo-text">
+            <b>North Dallas</b>
+            <span>Security &amp; Protective Services</span>
+          </span>
+        </a>
+        <nav class="footer-nav-deck">
+          <a href="#services">Services</a>
+          <a href="#planner">Planner</a>
+          <a href="#story">Compliance</a>
+          <a href="#why">Pillars</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+
+      <div class="footer-legal-bottom">
+        <p>&copy; <span id="copyright-current-year"></span> North Dallas Security &amp; Protective Services. All rights reserved.</p>
+        <p>TX Security License # C31175201 &bull; Licensed &amp; Insured &bull; Protecting People, Property &amp; Peace of Mind</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ JAVASCRIPT DECKS ============ -->
+  <script>
+    // 1. Mobile Menu Panel Toggle
+    const mobileBtn = document.getElementById('mobile-nav-toggle');
+    const mobileOverlay = document.getElementById('mobile-nav-overlay');
+    const mobileLinks = mobileOverlay.querySelectorAll('a');
+
+    mobileBtn.addEventListener('click', () => {
+      const activeState = mobileBtn.getAttribute('aria-expanded') === 'true';
+      mobileBtn.setAttribute('aria-expanded', !activeState);
+      mobileBtn.classList.toggle('open');
+      mobileOverlay.classList.toggle('active');
+    });
+
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileBtn.setAttribute('aria-expanded', 'false');
+        mobileBtn.classList.remove('open');
+        mobileOverlay.classList.remove('active');
+      });
+    });
+
+    // 2. Interactive Configurator Decks
+    const configuratorDecks = {
+      patrol: {
+        name: 'Randomized Property Patrols',
+        deterrent: 'PROPERTY PATROL VEHICLE',
+        desc: 'Marked patrol cars driving through your property to check gates, doors, and perimeters. Stops thieves and vandals from targeting your site by keeping them guessing when a guard will show up.',
+        dps: 'State-Licensed Patrol Guard',
+        gear: 'Stop Copper Theft & Break-Ins',
+        comms: 'Random Night Supervisor Checks'
+      },
+      unarmed: {
+        name: 'Static Building & Lobby Guards',
+        deterrent: 'ON-SITE BUILDING GUARD',
+        desc: 'Stationed guards standing watch at your doors, gates, or lobby. They control who gets in, check IDs, and make sure trespassers and unauthorized visitors stay out.',
+        dps: 'Vetted Lobby & Gate Guard',
+        gear: 'Control Access & Stop Trespassers',
+        comms: 'Unannounced Supervisor Audits'
+      },
+      armed: {
+        name: 'Armed Guard Security',
+        deterrent: 'VISIBLE ARMED PROTECTION',
+        desc: 'Highly trained armed guards stationed at high-value properties, warehouses, and retail centers. A powerful deterrent to keep thieves away, stop break-ins, and protect your investments.',
+        dps: 'Licensed Armed Guard (Texas DPS)',
+        gear: 'Deter Armed Theft & Vandalism',
+        comms: 'Direct Radio Dispatch Connection'
+      },
+      executive: {
+        name: 'Club & Private Event Guarding',
+        deterrent: 'VENUE & EVENT PROTECTION',
+        desc: 'Professional guards deployed to your club, bar, party, or event. They handle crowd control, check IDs, de-escalate trouble, and make sure your guests and loved ones stay safe.',
+        dps: 'Event & Venue Security Guard',
+        gear: 'Stop Fights & Manage Entry Gates',
+        comms: 'On-Site Team Lead Supervision'
+      }
+    };
+
+    const selectorButtons = document.querySelectorAll('.tactical-deck-row');
+    const scaleSlider = document.getElementById('scale-slider');
+    const scaleCountOutput = document.getElementById('scale-count-output');
+    const scheduleSlider = document.getElementById('schedule-slider');
+    const scheduleOutput = document.getElementById('schedule-output');
+    const contactFormBlueprintField = document.getElementById('contact-blueprint-selected');
+
+    // UI Console Elements
+    const uiTitleOutput = document.getElementById('console-title-output');
+    const uiDeterrentTag = document.getElementById('console-deterrent-tag');
+    const uiDescOutput = document.getElementById('console-desc-output');
+    const uiSpecDps = document.getElementById('spec-dps');
+    const uiSpecGear = document.getElementById('spec-gear');
+    const uiSpecComms = document.getElementById('spec-comms');
+    const uiSpecMatrixCalculation = document.getElementById('spec-matrix-calculation');
+
+    let selectedTier = 'patrol';
+
+    function renderConfigValues() {
+      const activeSpecs = configuratorDecks[selectedTier];
+      const counts = parseInt(scaleSlider.value);
+      const hours = parseInt(scheduleSlider.value);
+
+      // Render main texts
+      uiTitleOutput.textContent = activeSpecs.name;
+      uiDeterrentTag.textContent = activeSpecs.deterrent;
+      uiDescOutput.textContent = activeSpecs.desc;
+      uiSpecDps.textContent = activeSpecs.dps;
+      uiSpecGear.textContent = activeSpecs.gear;
+      uiSpecComms.textContent = activeSpecs.comms;
+
+      // Slider Indicators
+      scaleCountOutput.textContent = counts === 10 ? '10+ Guards (Detail Command)' : `${counts} Guard${counts > 1 ? 's' : ''}`;
+      scheduleOutput.textContent = `${hours} Hours`;
+
+      // Computation Line
+      const matrixString = `${counts} Guard${counts > 1 ? 's' : ''} / ${hours}h deployment`;
+      uiSpecMatrixCalculation.textContent = matrixString;
+
+      // Button Classes
+      selectorButtons.forEach(btn => {
+        const isSelected = btn.getAttribute('data-tier') === selectedTier;
+        btn.classList.toggle('active', isSelected);
+        btn.setAttribute('aria-checked', isSelected ? 'true' : 'false');
+      });
+
+      // Synchronize input in contact form
+      contactFormBlueprintField.value = `[${activeSpecs.deterrent}] ${activeSpecs.name} (${matrixString})`;
+    }
+
+    selectorButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        selectedTier = btn.getAttribute('data-tier');
+        renderConfigValues();
+      });
+    });
+
+    scaleSlider.addEventListener('input', renderConfigValues);
+    scheduleSlider.addEventListener('input', renderConfigValues);
+
+    // Initial render call
+    renderConfigValues();
+
+    // 3. Header Scroll transition
+    const siteHeader = document.getElementById('site-header');
+    window.addEventListener('scroll', () => {
+      siteHeader.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // 4. Scroll Reveal Intersections observer
+    const revealTargets = document.querySelectorAll('.reveal-element');
+    const observerInstance = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+          observerInstance.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.05,
+      rootMargin: '0px 0px -20px 0px'
+    });
+
+    revealTargets.forEach((target, index) => {
+      target.style.transitionDelay = `${(index % 3) * 0.04}s`;
+      observerInstance.observe(target);
+    });
+
+    // 5. Copyright Year
+    document.getElementById('copyright-current-year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
