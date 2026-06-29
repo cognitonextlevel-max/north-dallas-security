@@ -2418,5 +2418,47 @@
     // 5. Copyright Year
     document.getElementById('copyright-current-year').textContent = new Date().getFullYear();
   </script>
+
+  <!-- Lead form handler: sends the assessment request to info@ndsps.com via /api/contact -->
+  <script>
+    (function () {
+      var form = document.getElementById('threat-form');
+      if (!form) return;
+      form.onsubmit = null;
+      form.addEventListener('submit', async function (event) {
+        event.preventDefault();
+        var btn = form.querySelector('button[type="submit"]');
+        var label = btn ? btn.textContent : '';
+        if (btn) { btn.disabled = true; btn.textContent = 'Sending...'; }
+        var val = function (id) { var el = document.getElementById(id); return el ? el.value : ''; };
+        var payload = {
+          name: val('contact-name'),
+          email: val('contact-email'),
+          phone: val('contact-phone'),
+          company: val('contact-company'),
+          blueprint: val('contact-blueprint-selected'),
+          notes: val('contact-threat-notes')
+        };
+        try {
+          var resp = await fetch('/api/contact', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+          });
+          var data = await resp.json().catch(function () { return {}; });
+          if (resp.ok && data.success) {
+            alert('Security request received. A security coordinator will contact you within 2 hours.');
+            form.reset();
+          } else {
+            alert('Something went wrong sending your request. Please call (469) 487-4457 or email info@ndsps.com.');
+          }
+        } catch (e) {
+          alert('Network error. Please call (469) 487-4457 or email info@ndsps.com.');
+        } finally {
+          if (btn) { btn.disabled = false; btn.textContent = label; }
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
