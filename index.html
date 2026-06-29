@@ -1738,6 +1738,7 @@
         <a href="#planner">Blueprint Planner</a>
         <a href="#story">DPS Compliance</a>
         <a href="#why">Pillars</a>
+        <a href="#careers">Careers</a>
         <a href="#contact">Contact HQ</a>
       </nav>
 
@@ -1759,6 +1760,7 @@
     <a href="#planner">Planner</a>
     <a href="#story">Compliance</a>
     <a href="#why">Pillars</a>
+    <a href="#careers">Careers</a>
     <a href="#contact">Contact</a>
     <a href="tel:14694874457" class="btn-action btn-action-solid" style="margin-top: 25px;">Request Detail</a>
   </div>
@@ -2226,7 +2228,94 @@
     </div>
   </section>
 
-  <!-- ============ FOOTER ============ -->
+    <!-- ============ CAREERS / NOW HIRING SECTION ============ -->
+  <section class="section-pad careers-sec" id="careers">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-form-col reveal-element">
+          <h2>Now Hiring <span class="corporate-italic">Security Guards</span></h2>
+          <p class="desc">Looking for steady security work across Dallas&ndash;Fort Worth? Apply below. We welcome both licensed officers and dependable people ready to get certified &mdash; what matters most is that you show up, stay alert, and take the post seriously.</p>
+
+          <form id="apply-form" class="tactical-form">
+            <div class="input-field-group">
+              <label for="apply-name">Full Name *</label>
+              <input type="text" id="apply-name" class="tactical-input" placeholder="Your full name" required />
+            </div>
+
+            <div class="input-field-group">
+              <label for="apply-email">Email Address *</label>
+              <input type="email" id="apply-email" class="tactical-input" placeholder="you@email.com" required />
+            </div>
+
+            <div class="input-field-group">
+              <label for="apply-phone">Phone Number *</label>
+              <input type="tel" id="apply-phone" class="tactical-input" placeholder="(469) 555-0123" required />
+            </div>
+
+            <div class="input-field-group">
+              <label for="apply-position">Position of Interest</label>
+              <input type="text" id="apply-position" class="tactical-input" placeholder="e.g., Unarmed Guard, Armed Guard, Patrol Driver" />
+            </div>
+
+            <div class="input-field-group">
+              <label for="apply-experience">Years of Experience</label>
+              <input type="text" id="apply-experience" class="tactical-input" placeholder="e.g., 2 years" />
+            </div>
+
+            <div class="input-field-group">
+              <label for="apply-license">Texas Guard License / Card</label>
+              <input type="text" id="apply-license" class="tactical-input" placeholder="e.g., Level II, Level III, or none yet" />
+            </div>
+
+            <div class="input-field-group span-full-width">
+              <label for="apply-availability">Availability</label>
+              <input type="text" id="apply-availability" class="tactical-input" placeholder="e.g., Nights &amp; weekends, full-time" />
+            </div>
+
+            <div class="input-field-group span-full-width">
+              <label for="apply-resume">Upload Resume &mdash; PDF or Word (optional, max 2.5MB)</label>
+              <input type="file" id="apply-resume" class="tactical-input" accept=".pdf,.doc,.docx" style="padding-top: 14px; padding-bottom: 14px; color: var(--text-muted);" />
+            </div>
+
+            <div class="span-full-width" style="margin-top: 20px;">
+              <button type="submit" class="btn-action btn-action-solid" style="width: 100%;">Submit Application</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="contact-directory-col reveal-element">
+          <div>
+            <h3>Why Work With Us</h3>
+            <p style="font-size: 0.95rem; color: var(--text-muted);">We invest in officers who treat the job like a profession, not a place to nap.</p>
+
+            <div class="hq-directory-stack">
+              <div class="directory-item">
+                <span class="label">Consistent Work</span>
+                <span class="value-serif">Steady Schedules</span>
+              </div>
+
+              <div class="directory-item">
+                <span class="label">Local Posts</span>
+                <span class="value-serif">Across the DFW Metroplex</span>
+              </div>
+
+              <div class="directory-item">
+                <span class="label">Career Growth</span>
+                <span class="value-serif">Licensing &amp; Level-Up Support</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="legal-dispatch-notice">
+            North Dallas Security &amp; Protective Services is an equal opportunity employer.<br />
+            All officers must pass a Texas DPS background check.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- ============ FOOTER ============ -->
   <footer>
     <div class="container">
       <div class="footer-main-flex">
@@ -2258,7 +2347,8 @@
           <a href="#planner">Planner</a>
           <a href="#story">Compliance</a>
           <a href="#why">Pillars</a>
-          <a href="#contact">Contact</a>
+          <a href="#careers">Careers</a>
+    <a href="#contact">Contact</a>
         </nav>
       </div>
 
@@ -2454,6 +2544,72 @@
           }
         } catch (e) {
           alert('Network error. Please call (469) 487-4457 or email info@ndsps.com.');
+        } finally {
+          if (btn) { btn.disabled = false; btn.textContent = label; }
+        }
+      });
+    })();
+  </script>
+
+  <!-- Careers application handler: sends application + resume to info@ndsps.com via /api/apply -->
+  <script>
+    (function () {
+      var form = document.getElementById('apply-form');
+      if (!form) return;
+      var MAX = 2.5 * 1024 * 1024;
+      function readFileBase64(file) {
+        return new Promise(function (resolve, reject) {
+          var reader = new FileReader();
+          reader.onload = function () {
+            var result = reader.result || '';
+            var comma = result.indexOf(',');
+            resolve(comma >= 0 ? result.slice(comma + 1) : result);
+          };
+          reader.onerror = reject;
+          reader.readAsDataURL(file);
+        });
+      }
+      form.addEventListener('submit', async function (event) {
+        event.preventDefault();
+        var btn = form.querySelector('button[type="submit"]');
+        var label = btn ? btn.textContent : '';
+        var val = function (id) { var el = document.getElementById(id); return el ? el.value : ''; };
+        var fileInput = document.getElementById('apply-resume');
+        var resumeName = '';
+        var resumeData = '';
+        if (fileInput && fileInput.files && fileInput.files[0]) {
+          var f = fileInput.files[0];
+          if (f.size > MAX) { alert('That resume is larger than 2.5MB. Please upload a smaller file or email it to info@ndsps.com.'); return; }
+          resumeName = f.name;
+          try { resumeData = await readFileBase64(f); } catch (e) { resumeData = ''; resumeName = ''; }
+        }
+        if (btn) { btn.disabled = true; btn.textContent = 'Submitting...'; }
+        var payload = {
+          name: val('apply-name'),
+          email: val('apply-email'),
+          phone: val('apply-phone'),
+          position: val('apply-position'),
+          experience: val('apply-experience'),
+          license: val('apply-license'),
+          availability: val('apply-availability'),
+          resumeName: resumeName,
+          resumeData: resumeData
+        };
+        try {
+          var resp = await fetch('/api/apply', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+          });
+          var data = await resp.json().catch(function () { return {}; });
+          if (resp.ok && data.success) {
+            alert('Application received. Thanks for your interest - our team will reach out if there is a fit.');
+            form.reset();
+          } else {
+            alert('Something went wrong submitting your application. Please email info@ndsps.com or call (469) 487-4457.');
+          }
+        } catch (e) {
+          alert('Network error. Please email info@ndsps.com or call (469) 487-4457.');
         } finally {
           if (btn) { btn.disabled = false; btn.textContent = label; }
         }
